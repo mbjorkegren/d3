@@ -6109,7 +6109,7 @@
       }
       if (sortGroups) {
         groupIndex.sort(function(a, b) {
-          return sortGroups(groupSums[a], groupSums[b]);
+          return sortGroups({ sum: groupSums[a], index: a}, {sum: groupSums[b], index: b});
         });
       }
       if (sortSubgroups) {
